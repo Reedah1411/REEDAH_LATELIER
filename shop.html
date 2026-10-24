@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Reedah L'Atelier</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #FFF7FC;
+      color: #65345F;
+    }
+
+    header {
+      background: #F3E8FF;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      font-style: italic;
+      color: #765B75;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      padding: 16px;
+      background: white;
+      border-bottom: 1px solid #F8C8DC;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #65345F;
+    }
+
+    nav a:hover {
+      color: #B45BA0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 18px;
+      background: linear-gradient(135deg, #F3E8FF, #FFF7FC, #F8C8DC);
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      line-height: 1.7;
+      color: #765B75;
+    }
+
+    .category-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 24px 15px;
+    }
+
+    .category-links a {
+      text-decoration: none;
+      background: #F3E8FF;
+      color: #65345F;
+      border: 1px solid #F8C8DC;
+      padding: 11px 18px;
+      border-radius: 25px;
+    }
+
+    .category-links a:hover {
+      background: #F8C8DC;
+    }
+
+    .bag-section {
+      padding: 35px 20px;
+      scroll-margin-top: 15px;
+    }
+
+    .bag-section h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section-note {
+      text-align: center;
+      color: #765B75;
+      margin-bottom: 28px;
+    }
+
+    .bags {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .bag {
+      background: white;
+      border: 1px solid #F8C8DC;
+      border-radius: 13px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+      transition: transform 0.25s ease;
+    }
+
+    .bag:hover {
+      transform: translateY(-4px);
+    }
+
+    .bag img {
+      width: 100%;
+      height: 245px;
+      display: block;
+      object-fit: cover;
+      background: #F3E8FF;
+    }
+
+    .bag h3 {
+      font-size: 18px;
+      margin: 17px 8px 8px;
+    }
+
+    .price {
+      color: #8E4585;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .order {
+      display: inline-block;
+      margin: 5px 8px 0;
+      padding: 11px 15px;
+      background: #8E4585;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .order:hover {
+      background: #65345F;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 30px 0 0;
+      color: #8E4585;
+    }
+
+    .info-section {
+      padding: 35px 20px;
+      margin-top: 20px;
+      text-align: center;
+      background: #F3E8FF;
+    }
+
+    .info-section p {
+      line-height: 1.8;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: #8E4585;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 8px;
+    }
+
+    footer {
+      background: #65345F;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+
+      .hero h2 {
+        font-size: 29px;
+      }
+
+      .bag-section {
+        padding: 30px 12px;
+      }
+
+      .bags {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .bag img {
+        height: 175px;
+      }
+
+      .bag h3 {
+        font-size: 15px;
+      }
+
+      .order {
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>REEDAH L'ATELIER</h1>
+    <p>Elegance with a Purpose.</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="collection.html">Collection</a>
+    <a href="shop.html">Shop</a>
+    <a href="#cart">Cart & Orders</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- SHOP INTRODUCTION -->
+  <section class="hero" id="top">
+    <h2>Find Your Signature Bag</h2>
+    <p>
+      Beautiful bags for beautiful stories.<br>
+      Discover your next favourite piece at Reedah Atelier.
+    </p>
+  </section>
+
+  <!-- CATEGORY SHORTCUTS -->
+  <div class="category-links">
+    <a href="#mini-bags">Mini Bags</a>
+    <a href="#shoulder-bags">Shoulder Bags</a>
+    <a href="#tote-bags">Tote Bags</a>
+  </div>
+
+  <!-- ================================= -->
+  <!-- MINI BAGS: 10 PRODUCTS -->
+  <!-- ================================= -->
+
+  <section class="bag-section" id="mini-bags">
+    <h2>Mini Bags</h2>
+    <p class="section-note">Small in size, full of personality.</p>
+
+    <div class="bags">
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/market/49611af226dc51ba960f1ff7b7484aa1_AKYruJGDij6qB.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Cute plush mini bag" loading="lazy">
+        <h3>The Plush</h3>
+        <p class="price">₦18,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Blush%20Mini." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/b285153b-225e-4180-a16e-98a031ba7206.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Plush Mini" loading="lazy">
+        <h3>Plush mini</h3>
+        <p class="price">₦10,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Evening%20Pearl." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/ef0799ca-94a1-4dd8-ba1d-d27cdde23121.jpg?imageView2/2/w/1300/q/90/format/avif" alt="2pcs Plush heart" loading="lazy">
+        <h3>2pcs Plush heart mini bag and purse</h3>
+        <p class="price">₦15,500</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Pink%20Petal." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/1b7412e9-760a-4acb-997f-11ab271ee9e9.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Light Luxury Rhombus Faux Suede" loading="lazy">
+        <h3>Light Luxury Rhombus Faux Suede</h3>
+        <p class="price">₦19,500</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Lavender%20Dream." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/09ec08df-4d6b-48dc-99c1-983b905e5aa2.jpg?imageView2/2/w/1300/q/90/format/avif" alt="A Simple and Gentle-style Small Square Handbag with a Heart-shaped Lock Clasp" loading="lazy">
+        <h3>A Simple and Gentle-style Small Square Handbag with a Heart-shaped Lock Clasp</h3>
+        <p class="price">₦15,00</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Petite%20Princess." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/08ab7219-33d4-4d29-8225-2be56f9d9261.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Perfect Lily" loading="lazy">
+        <h3>Perfect Lily</h3>
+        <p class="price">₦20,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Royal%20Lilac." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/06c0dd2b-c519-403a-a320-459884147cc9.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Reedah Signature Mini" loading="lazy">
+        <h3>Reedah Signature Mini</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Reedah%20Signature%20Mini." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/21e86779-9e12-4e60-bd7b-009f1eb4d703.jpg?imageView2/2/w/1300/q/90/format/avif" alt=" Cute Bunny Ear Statement Clutch" loading="lazy">
+        <h3> Cute Bunny Ear Statement Clutch</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Sweet%20Lilac%20Mini." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/5ff181f5-485d-4634-bc37-3c90659a7485.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Dainty Charm" loading="lazy">
+        <h3>Dainty Charm</h3>
+        <p class="price">₦20,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Dainty%20Charm." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/0ceba7d3-4999-44e9-a4c7-96a93de0909a.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Plush Love Heart Shaped Mini" loading="lazy">
+        <h3>Plush Love Heart Shaped Mini</h3>
+        <p class="price">₦10,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Petite%20Muse." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+    </div>
+
+    <a class="back" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ================================= -->
+  <!-- SHOULDER BAGS: 10 PRODUCTS -->
+  <!-- ================================= -->
+
+  <section class="bag-section" id="shoulder-bags">
+    <h2>Shoulder Bags</h2>
+    <p class="section-note">Everyday elegance, beautifully carried.</p>
+
+    <div class="bags">
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/ae590b1273e24263bfe3b1234ebacca0-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="High-end Niche" loading="lazy">
+        <h3>High-end Niche</h3>
+        <p class="price">₦11,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Classic%20Shoulder." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/640eab52-a5b2-4ab3-94da-c74e983ed39f.jpg?imageView2/2/w/1300/q/90/format/avif" alt="1pc Fashionable Chain Shoulder Bag" loading="lazy">
+        <h3>1pc Fashionable Chain Shoulder Bag</h3>
+        <p class="price">₦8,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Elegant%20Lady." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/058bdb93-a5b7-4bfb-89bf-a8cc36db6301.jpg?imageView2/2/w/1300/q/90/format/avif" alt="French Retro Shoulder Bag" loading="lazy">
+        <h3>French Retro Shoulder Bag</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Midnight%20Classic." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/39ed43a217e44c6d87b701d4d43fbd1f-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Lychee Texture Crescent Bag" loading="lazy">
+        <h3>Lychee Texture Crescent Bag</h3>
+        <p class="price">₦15,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Executive." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/1474c2324eb241608298976cf735d77a-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Fashion Crescent Shoulder Bag" loading="lazy">
+        <h3>Fashion Crescent Shoulder Bag</h3>
+        <p class="price">₦15,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Cream%20Elegance." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/405c2485-d4a1-481c-9377-0c7607129821.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Simple Solid Color Casual Shoulder Ba" loading="lazy">
+        <h3>Simple Solid Color Casual Shoulder Bag</h3>
+        <p class="price">₦14,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20City%20Chic." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/73d8a345129f43c5aeb06ed93ebc23da-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Diamond Quilted Single Shoulder" loading="lazy">
+        <h3>Diamond Quilted Single Shoulder</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Occasion." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/00373540-2866-495c-958f-f3154e7dbc16.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Shiny Chain Shoulder Bag" loading="lazy">
+        <h3>Shiny Chain Shoulder Bag</h3>
+        <p class="price">₦15,500</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Blush%20Everyday." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/250a9ca5-54f1-43bb-99df-ad413b70b18b.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Purple luxe" loading="lazy">
+        <h3>Purple Luxe</h3>
+        <p class="price">₦9,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Luxe%20Lavender." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/83d40052-6007-4bce-86f5-84e801a5446b.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Signature Shoulder" loading="lazy">
+        <h3>Signature Shoulder</h3>
+        <p class="price">10,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Signature%20Shoulder." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+    </div>
+
+    <a class="back" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ================================= -->
+  <!-- TOTE BAGS: 10 PRODUCTS -->
+  <!-- ================================= -->
+
+  <section class="bag-section" id="tote-bags">
+    <h2>Tote Bags</h2>
+    <p class="section-note">Room for everything that matters.</p>
+
+    <div class="bags">
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/4fb76090-2820-46fa-8e8c-9de0ca4ca3ce.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Fashion Tote Bag And Scarf 2pcs Set" loading="lazy">
+        <h3>Fashion Tote Bag And Scarf 2pcs Set</h3>
+        <p class="price">₦15,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Everyday%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/7bf563f8-2d21-42b3-a77d-217d03f171b5.jpg?imageView2/2/w/1300/q/90/format/avif" alt=" Korean-Style Rhombus Chain Tote's Bag" loading="lazy">
+        <h3> Korean-Style Rhombus Chain Tote's Bag</h3>
+        <p class="price">₦18,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Daily%20Muse." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/3927b8b4-9118-40ad-ad86-d73039229900.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Mini Tote's Bag" loading="lazy">
+        <h3>Mini Tote's Bag</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Weekender%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/a7906ae0ab364a26ad8eab805268b607-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Color-Blocked Vintage Letter Fisherman Tote's Bag" loading="lazy">
+        <h3>Color-Blocked Vintage Letter Fisherman Tote's Bag</h3>
+        <p class="price">₦8,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Weekend%20Bloom." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/2df8a9fa746b425a91cba0899123291a-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Vertical Pleated Design Underarm Tote Bag " loading="lazy">
+        <h3>Vertical Pleated Design Underarm Tote Bag </h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Pink%20Everyday%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/905c6a71-3314-4077-8ae4-b5e81f4373fb.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Plush Tote's Bag" loading="lazy">
+        <h3>Plush Tote's Bag</h3>
+        <p class="price">₦16,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Classic%20Carry%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/open/5997fea2ef894be6b1372b4bd09e0dd7-goods.jpeg?imageView2/2/w/1300/q/90/format/avif" alt="Fashionable Casual Bowknot Polka Dot Print Tote's Bag" loading="lazy">
+        <h3>Fashionable Casual Bowknot Polka Dot Print Tote's Bag</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Workday%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/5e820c49-3d03-4b63-bf8e-1e5a225f7ddf.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Soft Life Tote" loading="lazy">
+        <h3>Soft Life Tote</h3>
+        <p class="price">₦17,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Soft%20Life%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fancy/market/2b4e64364b3febb0bb34cbedcc513c5c_vjkCZL5hWtwYF.jpg?imageView2/2/w/1300/q/90/format/avif" alt="The Luxe Carrier" loading="lazy">
+        <h3>The Luxe Carrier</h3>
+        <p class="price">₦12,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20The%20Luxe%20Carrier." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="bag">
+        <img src="https://img.kwcdn.com/product/fmket/01a15744b5fe2b9283cea6740ad768ff.jpg?imageView2/2/w/1300/q/90/format/avif" alt="Reedah Signature Tote" loading="lazy">
+        <h3>Reedah Signature Tote</h3>
+        <p class="price">₦15,000</p>
+        <a class="order" href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20want%20Reedah%20Signature%20Tote." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+    </div>
+
+    <a class="back" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- CART / ORDER INFORMATION -->
+  <section class="info-section" id="cart">
+    <h2>Ready to Order?</h2>
+    <p>
+      Choose your favourite bag and tap its WhatsApp order button
+      to send us your order.
+    </p>
+    <p>
+      Our team can confirm availability, delivery fees and payment
+      details with you before your order is completed.
+    </p>
+    <a class="contact-button"
+       href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier%2C%20I%20would%20like%20help%20placing%20an%20order."
+       target="_blank" rel="noopener">
+      Chat With Us
+    </a>
+  </section>
+
+  <!-- DELIVERY -->
+  <section class="info-section" id="delivery">
+    <h2>Delivery Information</h2>
+    <p>
+      Delivery costs and estimated arrival times will be confirmed
+      when you place your order.
+    </p>
+    <p>
+      Please confirm the product, total price and delivery details
+      before making payment.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="info-section" id="contact">
+    <h2>Contact Reedah L'Atelier</h2>
+    <p>Questions about a bag? We would love to hear from you.</p>
+    <a class="contact-button"
+       href="https://wa.me/2349134337558?text=Hello%20Reedah%20Atelier."
+       target="_blank" rel="noopener">
+      Contact Us on WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>REEDAH L'ATELIER</strong></p>
+    <p>Elegance with a Purpose.</p>
+    <p>© 2026 Reedah L'Atelier. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

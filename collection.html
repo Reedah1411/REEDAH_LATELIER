@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Collections | Reedah L'Atelier</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #FFF7FC;
+      color: #65345F;
+    }
+
+    header {
+      background: #F3E8FF;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      font-style: italic;
+      color: #765B75;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 16px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #F8C8DC;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #65345F;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #B45BA0;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 45px 20px 25px;
+    }
+
+    .intro h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #765B75;
+      line-height: 1.7;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      padding: 20px;
+      margin: auto;
+    }
+
+    .category-card {
+      background: #FFFFFF;
+      border: 1px solid #F8C8DC;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 28px;
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .category-card h3 {
+      font-size: 24px;
+      margin: 22px 10px 8px;
+    }
+
+    .category-card p {
+      color: #765B75;
+      padding: 0 15px;
+      line-height: 1.6;
+    }
+
+    .explore {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 13px 24px;
+      background: #8E4585;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    .explore:hover {
+      background: #65345F;
+    }
+
+    .note {
+      text-align: center;
+      padding: 20px;
+      color: #765B75;
+    }
+
+    footer {
+      margin-top: 35px;
+      padding: 28px 15px;
+      background: #F3E8FF;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+
+      .intro h2 {
+        font-size: 28px;
+      }
+
+      .category-card img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>REEDAH L'ATELIER</h1>
+    <p>Elegance with a Purpose.</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="collection.html">Collection</a>
+    <a href="shop.html">Shop</a>
+  </nav>
+
+  <!-- INTRODUCTION -->
+  <section class="intro">
+    <h2>Explore Our Collections</h2>
+    <p>
+      Every bag tells a story.<br>
+      Find the perfect piece to express yours.
+    </p>
+  </section>
+
+  <!-- COLLECTION CATEGORIES -->
+  <section class="categories">
+
+    <!-- MINI BAGS -->
+    <div class="category-card">
+      <img
+        src="https://img.kwcdn.com/product/fancy/c787644a-440a-4795-894b-8ea5c65b2614.jpg?imageView2/2/w/1300/q/90/format/avif"
+        alt="Mini bag collection">
+
+      <h3>Mini Bags</h3>
+
+      <p>
+        Small in size, beautiful in detail.
+        Discover mini bags for your special moments
+        and everyday style.
+      </p>
+
+      <a class="explore" href="shop.html#mini-bags">
+        Explore Mini Bags
+      </a>
+    </div>
+
+    <!-- SHOULDER BAGS -->
+    <div class="category-card">
+      <img
+        src="https://img.kwcdn.com/product/fancy/83d40052-6007-4bce-86f5-84e801a5446b.jpg?imageView2/2/w/1300/q/90/format/avif"
+        alt="Shoulder bag collection">
+
+      <h3>Shoulder Bags</h3>
+
+      <p>
+        Timeless, elegant and easy to style.
+        Find a shoulder bag for every occasion.
+      </p>
+
+      <a class="explore" href="shop.html#shoulder-bags">
+        Explore Shoulder Bags
+      </a>
+    </div>
+
+    <!-- TOTE BAGS -->
+    <div class="category-card">
+      <img
+        src="https://img.kwcdn.com/product/fancy/3927b8b4-9118-40ad-ad86-d73039229900.jpg?imageView2/2/w/1300/q/90/format/avif"
+        alt="Tote bag collection">
+
+      <h3>Tote Bags</h3>
+
+      <p>
+        Spacious, practical and stylish.
+        Find your everyday companion in our tote collection.
+      </p>
+
+      <a class="explore" href="shop.html#tote-bags">
+        Explore Tote Bags
+      </a>
+    </div>
+
+  </section>
+
+  <p class="note">
+    Discover your style with Reedah L'Atelier.
+  </p>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>REEDAH L'ATELIER</strong></p>
+    <p>Elegance with a Purpose.</p>
+    <p>© 2026 Reedah L'Atelier. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
