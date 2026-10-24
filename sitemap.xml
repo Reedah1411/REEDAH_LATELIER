@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://reedah1411.github.io/reedah_atelier/</loc>
+
+    <loc>https://reedah1411.github.io/REEDAH_LATELIER/</loc>
+
   </url>
+
   <url>
-    <loc>https://reedah1411.github.io/reedah_atelier/about.html</loc>
+
+    <loc>https://reedah1411.github.io/REEDAH_LATELIER/about.html</loc>
+
   </url>
+
   <url>
-    <loc>https://reedah1411.github.io/reedah_atelier/collection.html</loc>
+
+    <loc>https://reedah1411.github.io/REEDAH_LATELIER/collection.html</loc>
+
   </url>
+
   <url>
-    <loc>https://reedah1411.github.io/reedah_atelier/shop.html</loc>
+
+    <loc>https://reedah1411.github.io/REEDAH_LATELIER/shop.html</loc>
+
   </url>
+
 </urlset>
